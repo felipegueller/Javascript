@@ -18,14 +18,38 @@
         <h1>Iniciando os estudos de DOM</h1>
         <p>Aqui vai o resultado!</p>
         <p>Aprendendo a usar <strong>DOM</strong> em Javascript.</p>
-        <div>click me</div>
+        <div id="msg">click me</div>
+        <div name="myDiv">Hello</div>
+        <div class="root2"></div>
 
         <script>
+            // manipulando o background
             let corpo = window.document.body
-            corpo.style.backgroundColor = '#000333'
+            corpo.style.backgroundColor =   '#000333'
+
+            // manipulando uma tag específica p
             let p1 = document.getElementsByTagName('p')[1]
             p1.style.color = '#c3c' 
             document.write(`Está escrito assim: \"${p1.innerHTML}\"`)
+
+            // manipulando a div por id
+            let msg = document.getElementById('msg')
+            msg.style.background = 'green'
+            msg.innerText = 'Mudei o texto! haha :-p'
+
+            // manipulando a div pelo atributo name
+            let myDiv = document.getElementsByName("myDiv")[0]
+            myDiv.style.background = '#f00'
+
+            // manipulando o elemento por classe
+            let root2 = document.getElementsByClassName("root2")[0]
+            root2.innerHTML = 'Galadriel!'
+            root2.style.fontSize = '40px';
+            root2.style.background = '#FFFF33'
+
+            let querySelector = document.querySelector("div#msg")
+            querySelector.style.color = 'yellow'
+
         </script>
     </body>
 </hmtl>
